@@ -1,5 +1,5 @@
 import { Card, Title, BarChart, Subtitle,LineChart, DonutChart,Divider   } from "@tremor/react"
-
+import { Link } from "react-router-dom";
 function Line(){
   const chartdata = [
     {
@@ -139,7 +139,10 @@ function Line(){
      
       colors={["violet","slate", "orange", "indigo", "rose", "cyan", "amber","fuchsia", "lime", "pink"]}
     />
-  </Card>
+    <Divider></Divider>
+ 
+ </Card>
+  
   
   
     )

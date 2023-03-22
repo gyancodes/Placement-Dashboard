@@ -1,6 +1,9 @@
 import './App.css'
 import { Divider } from "@tremor/react";
+
 import D from './dashboard'
+import Un from './unplaceddata'
+import Ctc from './ctc'
 function App() {
 
   return (
@@ -8,6 +11,11 @@ function App() {
     <h1 className='text-red-500 text-5xl font-extrabold'>Placement Dashboard</h1>
     <Divider></Divider>
     <D></D>
+    <h1 className='text-green-500 text-5xl font-extrabold'>UNPLACED Dashboard</h1>
+    <Un></Un>
+    <Ctc></Ctc>
+   
+   
    </div>
   )
 }
