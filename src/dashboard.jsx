@@ -1,5 +1,4 @@
 import { Card, Title, BarChart, Subtitle,LineChart, DonutChart,Divider   } from "@tremor/react"
-import { Link } from "react-router-dom";
 function Line(){
   const chartdata = [
     {
@@ -95,14 +94,14 @@ function Line(){
       },
   ];
 
-  
-      
+
+
     return(
-      
+
       <Card decoration="left" decorationColor="indigo">
     <Title>Student placement dashboard of differnt school(Year-2022)</Title>
     <Subtitle>
-      Below is the comparison 
+      Below is the comparison
     </Subtitle>
     <Divider />
 
@@ -112,7 +111,7 @@ function Line(){
       index="name"
       categories={["Totalstudent","Interested for Placement","Number of Offers","Number of Students Placed"]}
       colors={["blue","red","green","cyan"]}
-     
+
       yAxisWidth={48}
     />
     <Divider />
@@ -136,15 +135,15 @@ function Line(){
       data={chartdata}
       category="Totalstudent"
       index="name"
-     
+
       colors={["violet","slate", "orange", "indigo", "rose", "cyan", "amber","fuchsia", "lime", "pink"]}
     />
     <Divider></Divider>
- 
+
  </Card>
-  
-  
-  
+
+
+
     )
 
 }
