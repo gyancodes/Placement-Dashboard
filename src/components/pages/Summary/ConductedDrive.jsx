@@ -5,35 +5,63 @@ import { Pie } from '@ant-design/plots';
 const ConductedDrive = () => {
   const data = [
     {
-      type: '分类一',
-      value: 27,
+      school: 'SOET',
+      value: 77,
     },
     {
-      type: '分类二',
-      value: 25,
+      school: 'MCA',
+      value: 14,
     },
     {
-      type: '分类三',
+      school: 'SoABE(AG)',
       value: 18,
     },
     {
-      type: '分类四',
-      value: 15,
+      school: 'SoASc',
+      value: 29,
     },
     {
-      type: '分类五',
+      school: 'MSSSoA',
+      value: 26,
+    },
+    {
+      school: 'SoVET',
+      value: 17,
+    },
+    {
+      school: 'SoPAHS',
+      value: 17,
+    },
+    {
+      school: 'SoPLS',
+      value: 18,
+    },
+    {
+      school: 'SoM',
+      value: 39,
+    },
+    {
+      school: 'SoFisheries',
+      value: 8,
+    },
+    {
+      school: 'SoForensic',
       value: 10,
     },
     {
-      type: '其他',
-      value: 5,
+      school: 'SoF (Cybersecurity)',
+      value: 8,
+    },
+    {
+      school: 'MSc-Geo',
+      value: 8,
     },
   ];
   const config = {
     appendPadding: 10,
     data,
     angleField: 'value',
-    colorField: 'type',
+    colorField: 'school',
     radius: 0.75,
     label: {
       type: 'spider',
