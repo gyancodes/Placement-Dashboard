@@ -5,31 +5,63 @@ import { Bar } from '@ant-design/plots';
 const InterestedStudents = () => {
   const data = [
     {
-      year: '1951 年',
-      value: 38,
+      school: 'SOET',
+      value: 517,
     },
     {
-      year: '1952 年',
-      value: 52,
+      school: 'MCA',
+      value: 115,
     },
     {
-      year: '1956 年',
-      value: 61,
+      school: 'SoABE(AG)',
+      value: 79,
     },
     {
-      year: '1957 年',
-      value: 145,
+      school: 'SoASc',
+      value: 314,
     },
     {
-      year: '1958 年',
-      value: 48,
+      school: 'MSSSoA',
+      value: 301,
+    },
+    {
+      school: 'SoVET',
+      value: 332,
+    },
+    {
+      school: 'SoPAHS',
+      value: 216,
+    },
+    {
+      school: 'SoPLS',
+      value: 324,
+    },
+    {
+      school: 'SoM',
+      value: 181,
+    },
+    {
+      school: 'SoFisheries',
+      value: 23,
+    },
+    {
+      school: 'SoForensic',
+      value: 40,
+    },
+    {
+      school: 'SoF (Cybersecurity)',
+      value: 15,
+    },
+    {
+      school: 'MSc-Geo',
+      value: 7,
     },
   ];
   const config = {
     data,
     xField: 'value',
-    yField: 'year',
-    seriesField: 'year',
+    yField: 'school',
+    seriesField: 'school',
     legend: {
       position: 'top-left',
     },
