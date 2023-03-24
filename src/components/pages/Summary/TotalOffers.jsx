@@ -5,31 +5,63 @@ import { Bar } from '@ant-design/plots';
 const TotalOffers = () => {
   const data = [
     {
-      year: '1951 年',
-      value: 38,
+      value: 539,
+      School: "SoET",
     },
     {
-      year: '1952 年',
-      value: 52,
+      value: 43,
+      School:"MCA",
     },
     {
-      year: '1956 年',
-      value: 61,
+      value: 60,
+      School:"SoABE(AG)",
     },
     {
-      year: '1957 年',
-      value: 145,
+      value: 87,
+      School:"SoASc",
     },
     {
-      year: '1958 年',
-      value: 48,
+      value: 176,
+      School:"MSSSoA",
+    },
+    {
+      value: 212,
+      School:"SoVET",
+    },
+    {
+      value: 51,
+      School:"SoPAHS",
+    },
+    {
+      value: 99,
+      School:"SoPLS",
+    },
+    {
+      value: 152,
+      School:"SoM",
+    },
+    {
+      value: 24,
+      School:"SoFisheries",
+    },
+    {
+      value: 10,
+      School:"SoForensic",
+    },
+    {
+      value: 0,
+      School:"SoF (Cybersecurity)",
+    },
+    {
+      value: 0,
+      School:"MSc-Geo",
     },
   ];
   const config = {
     data,
     xField: 'value',
-    yField: 'year',
-    seriesField: 'year',
+    yField: 'School',
+    seriesField: 'School',
     legend: {
       position: 'top-left',
     },

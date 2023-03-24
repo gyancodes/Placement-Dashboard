@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import {
   DesktopOutlined,
   FileOutlined,
@@ -10,6 +11,12 @@ import type { MenuProps } from 'antd';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
 import DemoPie from '../Pie';
 import ConductedDrive from '../pages/Summary/ConductedDrive';
+import TotalEligibale from '../pages/Summary/TotalEligible';
+import Targetforplacement from '../pages/Summary/PlacementTarget';
+import Offer from '../pages/Summary/TotalOffers';
+import MultipleOffer from '../pages/Summary/TotalStudentsMultipleOffers';
+import Intern from '../pages/Summary/TotalInternships';
+
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -61,7 +68,8 @@ const HeaderHome: React.FC = () => {
             <Breadcrumb.Item>Bill</Breadcrumb.Item>
           </Breadcrumb>
           <div style={{ padding: 24, minHeight: 360, background: colorBgContainer }}>
-            <ConductedDrive/>
+        
+          
           </div>
         </Content>
         <Footer style={{ textAlign: 'center' }}>Ant Design ©2023 Created by Ant UED</Footer>
