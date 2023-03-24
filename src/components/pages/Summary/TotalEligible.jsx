@@ -1,40 +1,98 @@
 import React, { useState, useEffect } from 'react';
+
 import ReactDOM from 'react-dom';
-import { Bar } from '@ant-design/plots';
+import { Line } from '@ant-design/plots';
 
 const TotalEligible = () => {
   const data = [
+    
     {
-      year: '1951 年',
-      value: 38,
+      value: 348,
+      School: "SoET",
     },
     {
-      year: '1952 年',
-      value: 52,
+      value: 0,
+      School:"MCA",
     },
     {
-      year: '1956 年',
-      value: 61,
+      value: 74,
+      School:"SoABE(AG)",
     },
     {
-      year: '1957 年',
-      value: 145,
+      value: 320,
+      School:"SoASc",
     },
     {
-      year: '1958 年',
-      value: 48,
+      value: 265,
+      School:"MSSSoA",
+    },
+    {
+      value: 250,
+      School:"SoVET",
+    },
+    {
+      value: 197,
+      School:"SoPAHS",
+    },
+    {
+      value: 267,
+      School:"SoPLS",
+    },
+    {
+      value: 173,
+      School:"SoM",
+    },
+    {
+      value: 22,
+      School:"SoFisheries",
+    },
+    {
+      value: 40,
+      School:"SoForensic",
+    },
+    {
+      value: 15,
+      School:"SoF (Cybersecurity)",
+    },
+    {
+      value: 7,
+      School:"MSc-Geo",
     },
   ];
+  
   const config = {
     data,
-    xField: 'value',
-    yField: 'year',
-    seriesField: 'year',
-    legend: {
-      position: 'top-left',
+    xField: 'School',
+    yField: 'value',
+    label: {},
+    point: {
+      size: 5,
+      shape: 'diamond',
+      style: {
+        fill: 'red',
+        stroke: 'green',
+        lineWidth: 2,
+      },
     },
+    tooltip: {
+      showMarkers: false,
+    },
+    state: {
+      active: {
+        style: {
+          shadowBlur: 4,
+          stroke: '#000',
+          fill: 'red',
+        },
+      },
+    },
+    interactions: [
+      {
+        type: 'marker-active',
+      },
+    ],
   };
-  return <Bar {...config} />;
+  return <Line {...config} />;
 };
 
 export default TotalEligible;
