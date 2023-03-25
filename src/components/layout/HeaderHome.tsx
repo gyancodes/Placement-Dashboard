@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import {
   DesktopOutlined,
   FileOutlined,
@@ -8,7 +9,16 @@ import {
 } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
+import DemoPie from '../Pie';
+import ConductedDrive from '../pages/Summary/ConductedDrive';
+import TotalStudents from '../pages/Summary/TotalStudents';
+import InterestedStudents from '../pages/Summary/InterestedStudents';
+import Conducted from '../pages/Summary/InterestedStudents';
 import TotalStudentPlaced from '../pages/Summary/TotalStudentPlaced';
+
+
+
+
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -61,6 +71,7 @@ const HeaderHome: React.FC = () => {
           </Breadcrumb>
           <div style={{ padding: 24, minHeight: 360, background: colorBgContainer }}>
             <TotalStudentPlaced/>
+
           </div>
         </Content>
         <Footer style={{ textAlign: 'center' }}>Centurion University Of Technology & Management ©2023 </Footer>

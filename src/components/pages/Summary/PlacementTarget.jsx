@@ -5,31 +5,63 @@ import { Bar } from '@ant-design/plots';
 const PlacementTarget = () => {
   const data = [
     {
-      year: '1951 年',
-      value: 38,
+      value: 400,
+      School: "SoET",
     },
     {
-      year: '1952 年',
-      value: 52,
+      value: 0,
+      School:"MCA",
     },
     {
-      year: '1956 年',
-      value: 61,
+      value: 50,
+      School:"SoABE(AG)",
     },
     {
-      year: '1957 年',
-      value: 145,
+      value: 185,
+      School:"SoASc",
     },
     {
-      year: '1958 年',
-      value: 48,
+      value: 130,
+      School:"MSSSoA",
+    },
+    {
+      value: 250,
+      School:"SoVET",
+    },
+    {
+      value: 125,
+      School:"SoPAHS",
+    },
+    {
+      value: 200,
+      School:"SoPLS",
+    },
+    {
+      value: 110,
+      School:"SoM",
+    },
+    {
+      value: 14,
+      School:"SoFisheries",
+    },
+    {
+      value: 24,
+      School:"SoForensic",
+    },
+    {
+      value: 8,
+      School:"SoF (Cybersecurity)",
+    },
+    {
+      value: 4,
+      School:"MSc-Geo",
     },
   ];
   const config = {
     data,
     xField: 'value',
-    yField: 'year',
-    seriesField: 'year',
+    yField: 'School',
+    seriesField: 'School',
     legend: {
       position: 'top-left',
     },

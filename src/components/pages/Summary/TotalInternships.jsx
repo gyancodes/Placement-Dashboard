@@ -1,40 +1,82 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import { Bar } from '@ant-design/plots';
+import { Pie } from '@ant-design/plots';
 
 const TotalInternships = () => {
   const data = [
     {
-      year: '1951 年',
-      value: 38,
+      value: 7,
+      School: "SoET",
     },
     {
-      year: '1952 年',
-      value: 52,
+      value: 0,
+      School:"MCA",
     },
     {
-      year: '1956 年',
-      value: 61,
+      value: 0,
+      School:"SoABE(AG)",
     },
     {
-      year: '1957 年',
-      value: 145,
+      value: 0,
+      School:"SoASc",
     },
     {
-      year: '1958 年',
-      value: 48,
+      value: 22,
+      School:"MSSSoA",
+    },
+    {
+      value: 0,
+      School:"SoVET",
+    },
+    {
+      value: 0,
+      School:"SoPAHS",
+    },
+    {
+      value: 0,
+      School:"SoPLS",
+    },
+    {
+      value: 15,
+      School:"SoM",
+    },
+    {
+      value: 0,
+      School:"SoFisheries",
+    },
+    {
+      value: 0,
+      School:"SoForensic",
+    },
+    {
+      value: 0,
+      School:"SoF (Cybersecurity)",
+    },
+    {
+      value: 0,
+      School:"MSc-Geo",
     },
   ];
   const config = {
+    appendPadding: 10,
     data,
-    xField: 'value',
-    yField: 'year',
-    seriesField: 'year',
-    legend: {
-      position: 'top-left',
+    angleField: 'value',
+    colorField: 'School',
+    radius: 0.8,
+    label: {
+      type: 'outer',
+      content: '{name} {percentage}',
     },
+    interactions: [
+      {
+        type: 'pie-legend-active',
+      },
+      {
+        type: 'element-active',
+      },
+    ],
   };
-  return <Bar {...config} />;
+  return <Pie {...config} />;
 };
 
 export default TotalInternships;
