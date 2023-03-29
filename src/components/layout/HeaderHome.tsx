@@ -7,19 +7,9 @@ import {
   TeamOutlined,
   UserOutlined,
 
-
 } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import { Breadcrumb, Layout, Menu, theme } from "antd";
-import DemoPie from "../Pie";
-import ConductedDrive from "../pages/Summary/ConductedDrive";
-import TotalStudentPlaced from "../pages/Summary/TotalStudentPlaced";
-import TotalStudents from "../pages/Summary/TotalStudents";
-import InterestedStudents from "../pages/Summary/InterestedStudents";
-import PlacementTarget from "../pages/Summary/PlacementTarget";
-import TotalOffers from "../pages/Summary/TotalOffers";
-import TotalStudentMultipleOffers from "../pages/Summary/TotalStudentsMultipleOffers";
-import TotalInternships from "../pages/Summary/TotalInternships";
 
 
 const { Header, Content, Footer, Sider } = Layout;
