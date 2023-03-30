@@ -1,18 +1,22 @@
 import {
-  DashboardFilled,
-  HomeFilled,
-  PoweroffOutlined,
-  ProfileFilled,
-  UserOutlined,
+  PieChartOutlined,
 } from "@ant-design/icons";
-import { Breadcrumb, Layout, Menu, theme } from "antd";
+import {  Layout, Menu, theme } from "antd";
 import React, { useState } from "react";
 
 import Sider from "antd/es/layout/Sider";
-import { Routes, Route, useNavigate,  } from "react-router-dom";
-import TotalStudents from "../pages/Summary/TotalStudents";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import { Content, Footer, Header } from "antd/es/layout/layout";
 import TotalEligible from "../pages/Summary/TotalEligible";
+import InterestedStudents from "../pages/Summary/InterestedStudents";
+import TotalStudents from "../pages/Summary/TotalStudents";
+import PlacementTarget from "../pages/Summary/PlacementTarget";
+import ConductedDrive from "../pages/Summary/ConductedDrive";
+import TotalOffers from "../pages/Summary/TotalOffers";
+import TotalStudentPlaced from "../pages/Summary/TotalStudentPlaced";
+import TotalStudentMultipleOffers from "../pages/Summary/TotalStudentsMultipleOffers";
+import SalaryRange from "../pages/Summary/SalaryRange";
+import TotalInternships from "../pages/Summary/TotalInternships";
 
 const SideMenu = (props) => {
   const [collapsed, setCollapsed] = useState(false);
@@ -42,22 +46,39 @@ const SideMenu = (props) => {
               }
             }}
             items={[
-              { label: "Home", key: "/", icon: <HomeFilled /> },
+              // { label: "Home", key: "/", icon: <HomeFilled /> },
               {
-                label: "Dashboard",
-                key: "/dashboard",
-                icon: <DashboardFilled />,
+                label: "Placement Summary",
+                key: "/placementsummary",
+                icon: <PieChartOutlined />,
+                children: [
+                  { label: "Total Students", key: "/totalstudents" },
+                  { label: "Eligible Students", key: "/eligiblestudents" },
+                  { label: "Interested Students", key: "/interestedstudents" },
+                  { label: "Placement Target", key: "/placementtarget" },
+                  { label: "Conducted Drive", key: "/conducteddrive" },
+                  { label: "Offers Generated", key: "/offersgenerated" },
+                  { label: "Total Student Placed", key: "/totalstudentplaced" },
+                  { label: "Multiple Offers", key: "/multipleoffers" },
+                  { label: "Salary Range", key: "/salaryrange" },
+                  { label: "Internships", key: "/internships" },
+                ],
               },
               {
-                label: "Total Student",
-                key: "/totalstudent",
-                icon: <ProfileFilled />,
-              },
-              { label: "About", key: "/about", icon: <UserOutlined /> },
-              {
-                label: "Signout",
-                key: "/signout",
-                icon: <PoweroffOutlined />,
+                label: "Unplaced Data",
+                key: "/unplaceddata",
+                icon: <PieChartOutlined />,
+                children: [
+                  {
+                    label: "Total Interested and Placed",
+                    key: "",
+                  },
+                  { label: "Total Strength", key: "" },
+                  {
+                    label: "Total Unplaced Students",
+                    key: "",
+                  },
+                ],
               },
             ]}
           ></Menu>
@@ -86,7 +107,7 @@ const SideMenu = (props) => {
                 background: colorBgContainer,
               }}
             >
-             <ContentDisplay/>
+              <ContentDisplay />
             </div>
           </Content>
           <Footer style={{ textAlign: "center" }}>
@@ -102,9 +123,20 @@ function ContentDisplay() {
     <div>
       <Routes>
         {/* <Route path="/" element={<div>Home</div>} /> */}
-        <Route path="/totalstudent" element={<TotalStudents />} />
-        {/* <Route path="/profile" element={<div>Profile</div>} /> */}
-        {/* <Route path="/about" element={<div>About</div>} /> */}
+        <Route path="/totalstudents" element={<TotalStudents />} />
+        <Route path="/eligiblestudents" element={<TotalEligible />} />
+        <Route path="interestedstudents" element={<InterestedStudents />} />
+        <Route path="/placementtarget" element={<PlacementTarget />} />
+        <Route path="/conducteddrive" element={<ConductedDrive />} />
+        <Route path="/offersgenerated" element={<TotalOffers />} />
+        <Route path="/totalstudentplaced" element={<TotalStudentPlaced />} />
+        <Route
+          path="/multipleoffers"
+          element={<TotalStudentMultipleOffers />}
+        />
+        <Route path="/salaryrange" element={<SalaryRange />} />
+        <Route path="/internships" element={<TotalInternships />} />
+
       </Routes>
     </div>
   );

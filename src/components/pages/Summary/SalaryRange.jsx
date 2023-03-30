@@ -34,7 +34,9 @@ const SalaryRange = () => {
       position: 'top-left',
     },
   };
-  return <Bar {...config} />;
+  return (
+    <h1>Salary Range</h1>
+  );
 };
 
 export default SalaryRange;
