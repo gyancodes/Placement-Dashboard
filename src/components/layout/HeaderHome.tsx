@@ -6,8 +6,6 @@ import {
   PieChartOutlined,
   TeamOutlined,
   UserOutlined,
-
-
 } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import { Breadcrumb, Layout, Menu, theme } from "antd";
@@ -20,7 +18,8 @@ import PlacementTarget from "../pages/Summary/PlacementTarget";
 import TotalOffers from "../pages/Summary/TotalOffers";
 import TotalStudentMultipleOffers from "../pages/Summary/TotalStudentsMultipleOffers";
 import TotalInternships from "../pages/Summary/TotalInternships";
-
+import { Routes, Route } from "react-router-dom";
+import TotalEligible from "../pages/Summary/TotalEligible";
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -37,14 +36,13 @@ function getItem(
     icon,
     children,
     label,
-
   } as MenuItem;
 }
 
 const items: MenuItem[] = [
   // getItem("Placement Summary", "1", <PieChartOutlined />),
   // getItem("Unplaced Data", "2", <DesktopOutlined />),
-  getItem("Placement Summary", "sub1", <PieChartOutlined />,[
+  getItem("Placement Summary", "sub1", <PieChartOutlined />, [
     getItem("Total Students", "3"),
     getItem("Eligible Students", "4"),
     getItem("Interested Students", "5"),
@@ -102,7 +100,7 @@ const HeaderHome: React.FC = () => {
           }}
         >
           <h1 className="font-mono text-2xl mt-4 text-blue-700 font-extrabold">
-            Placement Dashboard
+            Placement Dashboard hello
           </h1>
         </Header>
         <Content style={{ margin: "0 16px" }}>
@@ -125,13 +123,16 @@ const HeaderHome: React.FC = () => {
             {/* <ConductedDrive/> */}
             {/* <InterestedStudents/> */}
             {/* <PlacementTarget/> */}
-            <TotalOffers/>
+            {/* <TotalOffers/> */}
             {/* <TotalStudentMultipleOffers/> */}
             {/* <TotalInternships/> */}
 
-
-
-
+            <Routes>
+              <Route path="/totalstudents" element={<TotalStudents />} />
+              <Route path="/eligiblestudents" element={<TotalEligible />} />
+              {/* <Route path="/totalstudents" element={<div>TotalStudents</div>}/>
+              <Route path="/totalstudents" element={<div>TotalStudents</div>}/> */}
+            </Routes>
           </div>
         </Content>
         <Footer style={{ textAlign: "center" }}>
