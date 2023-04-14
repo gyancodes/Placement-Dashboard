@@ -17,6 +17,7 @@ import TotalStudentPlaced from "../pages/Summary/TotalStudentPlaced";
 import TotalStudentMultipleOffers from "../pages/Summary/TotalStudentsMultipleOffers";
 import SalaryRange from "../pages/Summary/SalaryRange";
 import TotalInternships from "../pages/Summary/TotalInternships";
+import InterestedStudentPlaced from "../pages/UnplacedData/Totalintrested&Placed";
 
 const SideMenu = (props) => {
   const [collapsed, setCollapsed] = useState(false);
@@ -71,7 +72,7 @@ const SideMenu = (props) => {
                 children: [
                   {
                     label: "Total Interested and Placed",
-                    key: "",
+                    key: "/InterestedStudentPlaced",
                   },
                   { label: "Total Strength", key: "" },
                   {
@@ -130,6 +131,7 @@ function ContentDisplay() {
         <Route path="/conducteddrive" element={<ConductedDrive />} />
         <Route path="/offersgenerated" element={<TotalOffers />} />
         <Route path="/totalstudentplaced" element={<TotalStudentPlaced />} />
+        <Route path="/InterestedStudentPlaced" element={<InterestedStudentPlaced />} />
         <Route
           path="/multipleoffers"
           element={<TotalStudentMultipleOffers />}
