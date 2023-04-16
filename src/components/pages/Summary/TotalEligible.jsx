@@ -5,7 +5,7 @@ import { Line } from '@ant-design/plots';
 
 const TotalEligible = () => {
   const data = [
-    
+
     {
       value: 348,
       School: "SoET",
@@ -59,7 +59,7 @@ const TotalEligible = () => {
       School:"MSc-Geo",
     },
   ];
-  
+
   const config = {
     data,
     xField: 'School',

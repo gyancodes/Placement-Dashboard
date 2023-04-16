@@ -104,7 +104,7 @@ const SideMenu = (props) => {
             <div
               style={{
                 padding: 24,
-                minHeight: 360,
+                minHeight: 550,
                 background: colorBgContainer,
               }}
             >

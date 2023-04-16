@@ -66,7 +66,7 @@ const TotalOffers = () => {
       position: 'top-left',
     },
   };
-  return <Bar {...config} />;
+  return <Bar {...config} height={550} />;
 };
 
 export default TotalOffers;
