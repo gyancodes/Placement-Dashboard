@@ -4,6 +4,7 @@ import {
 import {  Layout, Menu, theme } from "antd";
 import React, { useState } from "react";
 
+
 import Sider from "antd/es/layout/Sider";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { Content, Footer, Header } from "antd/es/layout/layout";
@@ -19,7 +20,12 @@ import SalaryRange from "../pages/Summary/SalaryRange";
 import TotalInternships from "../pages/Summary/TotalInternships";
 import InterestedStudentPlaced from "../pages/UnplacedData/Totalintrested&Placed";
 
+ import cutmlogo from "../../assets/cutmlogo.webp";
+
+
 const SideMenu = (props) => {
+
+
   const [collapsed, setCollapsed] = useState(false);
   const {
     token: { colorBgContainer },
@@ -27,6 +33,7 @@ const SideMenu = (props) => {
   const navigate = useNavigate();
 
   return (
+
     <>
       <Layout style={{ minHeight: "100vh" }}>
         <Sider
@@ -35,6 +42,10 @@ const SideMenu = (props) => {
           onCollapse={(value) => setCollapsed(value)}
           width={250}
         >
+          <div className="flex justify-center rounded mt-2">
+
+          <img src={cutmlogo} alt="cutmlogo" style={{background:"white", height:60, width:"auto", borderRadius:"10px",}} />
+          </div>
           <Menu
             theme="dark"
             defaultSelectedKeys={["1"]}
@@ -88,11 +99,12 @@ const SideMenu = (props) => {
           <Header
             style={{
               padding: 0,
-              background: colorBgContainer,
+              background: "colorBgContainer",
               textAlign: "center",
+
             }}
           >
-            <h1 className="font-mono text-2xl mt-4 text-blue-700 font-extrabold">
+            <h1 className="font-sans text-2xl mt-4 text-white font-extrabold">
               Placement Dashboard
             </h1>
           </Header>
@@ -111,7 +123,7 @@ const SideMenu = (props) => {
               <ContentDisplay />
             </div>
           </Content>
-          <Footer style={{ textAlign: "center" }}>
+          <Footer  style={{ textAlign: "center" }}>
             Centurion University Of Technology & Management ©2023{" "}
           </Footer>
         </Layout>
