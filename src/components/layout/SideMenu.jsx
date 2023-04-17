@@ -19,6 +19,9 @@ import TotalStudentMultipleOffers from "../pages/Summary/TotalStudentsMultipleOf
 import SalaryRange from "../pages/Summary/SalaryRange";
 import TotalInternships from "../pages/Summary/TotalInternships";
 import InterestedStudentPlaced from "../pages/UnplacedData/Totalintrested&Placed";
+import UnplacedStudent from "../pages/UnplacedData/TotalUnplacedStudents";
+import Strength from "../pages/UnplacedData/TotalStrength";
+
 
  import cutmlogo from "../../assets/cutmlogo.webp";
 
@@ -85,10 +88,10 @@ const SideMenu = (props) => {
                     label: "Total Interested and Placed",
                     key: "/InterestedStudentPlaced",
                   },
-                  { label: "Total Strength", key: "" },
+                  { label: "Total Strength", key: "/Strength" },
                   {
                     label: "Total Unplaced Students",
-                    key: "",
+                    key: "/UnplacedStudent",
                   },
                 ],
               },
@@ -144,7 +147,9 @@ function ContentDisplay() {
         <Route path="/offersgenerated" element={<TotalOffers />} />
         <Route path="/totalstudentplaced" element={<TotalStudentPlaced />} />
         <Route path="/InterestedStudentPlaced" element={<InterestedStudentPlaced />} />
-        <Route
+        <Route path="/UnplacedStudent" element={<UnplacedStudent />} />
+        <Route path="/Strength" element={<Strength />} />
+       <Route
           path="/multipleoffers"
           element={<TotalStudentMultipleOffers />}
         />
