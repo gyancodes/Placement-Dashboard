@@ -11,22 +11,25 @@
   "dependencies": {
     "@ant-design/charts": "^1.4.2",
     "@ant-design/icons": "^5.0.1",
-    "@tremor/react": "^2.0.2",
-    "antd": "^5.3.2",
+    "@material-tailwind/react": "^1.4.2",
+    "@tremor/react": "^2.2.0",
+    "antd": "^5.4.3",
     "chart.js": "^4.2.1",
-    "heroicons": "^1.0.6",
+    "heroicons": "^2.0.17",
+    "npm-check-updates": "^16.10.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.9.0",
-    "react-script": "^2.0.5"
+    "react-router-dom": "^6.10.0",
+    "react-script": "^2.0.5",
+    "swiper": "^9.2.3"
   },
   "devDependencies": {
-    "@types/react": "^18.0.28",
+    "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
     "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.7",
-    "vite": "^4.2.0"
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.1",
+    "vite": "^4.2.2"
   }
 }

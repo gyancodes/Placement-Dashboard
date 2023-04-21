@@ -1,13 +1,11 @@
 import "./App.css";
-import { Divider } from "@tremor/react";
+import Home from "./components/layout/Home";
 
-import HeaderHome from "./components/layout/HeaderHome";
 import SideMenu from "./components/layout/SideMenu";
 function App() {
   return (
     <>
-      {/* <HeaderHome /> */}
-      <SideMenu/>
+      <Home />
     </>
   );
 }
