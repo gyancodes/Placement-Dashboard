@@ -10,7 +10,7 @@ import Tata from "../../assets/company/tata.png";
 import virtusa from "../../assets/company/virtusa.png";
 import wipro from "../../assets/company/wipro.png";
 import hyundai from "../../assets/company/hyundai.png";
-import deloitte from "../../assets/company/deloitte.png";
+import deloitte from "../../assets/company/Deloitte.png";
 import justdail from "../../assets/company/justdail.png";
 
 
