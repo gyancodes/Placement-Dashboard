@@ -1,5 +1,5 @@
 import { Card, Title, BarChart, Subtitle,LineChart, DonutChart,Divider   } from "@tremor/react"
-function Line(){
+function Dashboard(){
   const chartdata = [
     {
         Totalstudent: 582,
@@ -147,4 +147,4 @@ function Line(){
     )
 
 }
-export default Line
+export default Dashboard

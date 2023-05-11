@@ -1,12 +1,15 @@
-import {
-  PieChartOutlined,
-} from "@ant-design/icons";
-import {  Layout, Menu, theme } from "antd";
+import { PieChartOutlined } from "@ant-design/icons";
+import { Layout, Menu, theme } from "antd";
 import React, { useState } from "react";
 
-
 import Sider from "antd/es/layout/Sider";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  useNavigate,
+  Link,
+  useLocation,
+} from "react-router-dom";
 import { Content, Footer, Header } from "antd/es/layout/layout";
 import TotalEligible from "../pages/Summary/TotalEligible";
 import InterestedStudents from "../pages/Summary/InterestedStudents";
@@ -22,13 +25,10 @@ import InterestedStudentPlaced from "../pages/UnplacedData/Totalintrested&Placed
 import UnplacedStudent from "../pages/UnplacedData/TotalUnplacedStudents";
 import Strength from "../pages/UnplacedData/TotalStrength";
 
-
- import cutmlogo from "../../assets/cutmlogo.webp";
-
+import cutmlogo from "../../assets/cutmlogo.png";
+import Dashboard from "../../dashboard";
 
 const SideMenu = (props) => {
-
-
   const [collapsed, setCollapsed] = useState(false);
   const {
     token: { colorBgContainer },
@@ -36,7 +36,6 @@ const SideMenu = (props) => {
   const navigate = useNavigate();
 
   return (
-
     <>
       <Layout style={{ minHeight: "100vh" }}>
         <Sider
@@ -46,8 +45,18 @@ const SideMenu = (props) => {
           width={250}
         >
           <div className="flex justify-center rounded mt-2">
-
-          <img src={cutmlogo} alt="cutmlogo" style={{background:"white", height:60, width:"auto", borderRadius:"10px",}} />
+            <Link to="/">
+              <img
+                src={cutmlogo}
+                alt="cutmlogo"
+                style={{
+                  background: "white",
+                  height: 60,
+                  width: "auto",
+                  borderRadius: "10px",
+                }}
+              />
+            </Link>
           </div>
           <Menu
             theme="dark"
@@ -104,7 +113,6 @@ const SideMenu = (props) => {
               padding: 0,
               background: "colorBgContainer",
               textAlign: "center",
-
             }}
           >
             <h1 className="font-sans text-2xl mt-4 text-white font-extrabold">
@@ -112,10 +120,6 @@ const SideMenu = (props) => {
             </h1>
           </Header>
           <Content style={{ margin: "0 16px" }}>
-            {/* <Breadcrumb style={{ margin: "16px 0" }}>
-              <Breadcrumb.Item>{location.pathname === "/"}</Breadcrumb.Item>
-              <Breadcrumb.Item>Total Student</Breadcrumb.Item>
-            </Breadcrumb> */}
             <div
               style={{
                 padding: 24,
@@ -125,8 +129,10 @@ const SideMenu = (props) => {
             >
               <ContentDisplay />
             </div>
+
           </Content>
-          <Footer  style={{ textAlign: "center" }}>
+
+          <Footer style={{ textAlign: "center" }}>
             Centurion University Of Technology & Management ©2023{" "}
           </Footer>
         </Layout>
@@ -138,7 +144,8 @@ function ContentDisplay() {
   return (
     <div>
       <Routes>
-        {/* <Route path="/" element={<div>Home</div>} /> */}
+        <Route path="*" element={<Dashboard />} />
+        <Route path="/" element={<Dashboard/>} />
         <Route path="/totalstudents" element={<TotalStudents />} />
         <Route path="/eligiblestudents" element={<TotalEligible />} />
         <Route path="interestedstudents" element={<InterestedStudents />} />
@@ -146,16 +153,18 @@ function ContentDisplay() {
         <Route path="/conducteddrive" element={<ConductedDrive />} />
         <Route path="/offersgenerated" element={<TotalOffers />} />
         <Route path="/totalstudentplaced" element={<TotalStudentPlaced />} />
-        <Route path="/InterestedStudentPlaced" element={<InterestedStudentPlaced />} />
+        <Route
+          path="/InterestedStudentPlaced"
+          element={<InterestedStudentPlaced />}
+        />
         <Route path="/UnplacedStudent" element={<UnplacedStudent />} />
         <Route path="/Strength" element={<Strength />} />
-       <Route
+        <Route
           path="/multipleoffers"
           element={<TotalStudentMultipleOffers />}
         />
         <Route path="/salaryrange" element={<SalaryRange />} />
         <Route path="/internships" element={<TotalInternships />} />
-
       </Routes>
     </div>
   );

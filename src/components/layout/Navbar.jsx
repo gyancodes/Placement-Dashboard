@@ -3,13 +3,11 @@ import cutmlogo from "../../assets/cutm-logo.webp";
 
 const Navbar = () => {
   return (
-    <div className="header items-center h-34 shadow-xl">
-      <div className="nav flex px-4 py-2 items-center">
-        <div className="flex">
-          <img src={cutmlogo} className="h-36 w-24" alt="" />
-        </div>
+    <div className="shadow-xl  mb-14">
+      <div className="flex items-center px-4 py-2 justify-between text-center">
+        <img src={cutmlogo} className="h-24 w-22" alt="" />
+        <h1 className="font-sans text-gray-700 font-bold text-2xl">Career Development Cell</h1>
       </div>
-
     </div>
   );
 };

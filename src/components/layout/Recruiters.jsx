@@ -1,75 +1,76 @@
 import React from "react";
-import { Autoplay } from "swiper";
+import fmc from "../../assets/company/fmc.png";
+import adove from "../../assets/company/adove.png";
+import bosch from "../../assets/company/Bosch.png";
+import ashok from "../../assets/company/ashok.png";
+import phillips from "../../assets/company/Phillips.png";
+import Byjus from "../../assets/company/Byjus.png";
 
-import "swiper/css";
+import Tata from "../../assets/company/tata.png";
+import virtusa from "../../assets/company/virtusa.png";
+import wipro from "../../assets/company/wipro.png";
+import hyundai from "../../assets/company/hyundai.png";
+import deloitte from "../../assets/company/deloitte.png";
+import justdail from "../../assets/company/justdail.png";
 
-import "swiper/css/autoplay";
-import { Swiper, SwiperSlide, } from "swiper/react";
+
+
+
+
+
 
 const Recruiters = () => {
   return (
-    <div className="mt-10">
-      <h1 className="my-6">Our Top Recruiters</h1>
-
-      <div className="w-full px-10 bg-gray-300 h-28 flex justify-center items-center rounded-2xl">
-        <Swiper spaceBetween={20} slidesPerView={5} modules={Autoplay} >
-          <SwiperSlide>
-            <div className="">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Adobe_Corporate_logo.svg/2560px-Adobe_Corporate_logo.svg.png"
-                className="h-10"
-                alt=""
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="">
-              <img
-                src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c51f.png"
-                className="h-10"
-                alt=""
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Tata_Consultancy_Services_Logo.svg/2560px-Tata_Consultancy_Services_Logo.svg.png"
-                className="h-10"
-                alt=""
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Adobe_Corporate_logo.svg/2560px-Adobe_Corporate_logo.svg.png"
-                className="h-10"
-                alt=""
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="">
-              <img
-                src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c51f.png"
-                className="h-10"
-                alt=""
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Tata_Consultancy_Services_Logo.svg/2560px-Tata_Consultancy_Services_Logo.svg.png"
-                className="h-10"
-                alt=""
-              />
-            </div>
-          </SwiperSlide>
-        </Swiper>
+    <>
+      <div className="mt-24 text-center font-semibold">
+        <h1 className="my-16 font-bold text-gray-600 text-4xl">Our Top Recruiters</h1>
       </div>
-    </div>
+      <div className="flex justify-center items-center flex-col">
+
+
+        <div className="lg:flex grid grid-cols-2 justify-center  gap-12 px-5 items-center">
+          <div>
+            <img src={fmc} alt="1" className="w-36" />
+          </div>
+          <div>
+            <img src={adove} alt="1" className="w-36" />
+          </div>
+          <div>
+            <img src={bosch} alt="1" className="w-36" />
+          </div>
+          <div>
+            <img src={ashok} alt="1" className="w-36" />
+          </div>
+          <div>
+            <img src={phillips} alt="1" className="w-36" />
+          </div>
+          <div>
+            <img src={Byjus} alt="1" className="w-36" />
+          </div>
+
+        </div>
+        <div className="lg:flex justify-center grid grid-cols-2  gap-12 px-5 mt-10 items-center">
+          <div>
+            <img src={Tata} alt="1" className="w-36" />
+          </div>
+          <div>
+            <img src={virtusa} alt="1" className="w-36" />
+          </div>
+          <div>
+            <img src={wipro} alt="1" className="w-36" />
+          </div>
+          <div>
+            <img src={deloitte} alt="1" className="w-36" />
+          </div>
+          <div>
+            <img src={hyundai} alt="1" className="w-36" />
+          </div>
+          <div>
+            <img src={justdail} alt="1" className="w-36" />
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 
